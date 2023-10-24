@@ -9,4 +9,5 @@ public class Song extends Performance {
     public void sing() {
         System.out.printf("Singing %s", this.name);
     }
+
 }
