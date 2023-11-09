@@ -13,7 +13,6 @@ public class Customer {
 
     public Customer(String name) {
         this.id = UUID.randomUUID();
-        ;
         this.name = name;
         this.bankAccounts = new ArrayList<>();
     }

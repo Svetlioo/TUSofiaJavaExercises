@@ -1,4 +1,4 @@
-package SAA.LB_27_10_2023;
+package SAA;
 
 import java.util.Scanner;
 

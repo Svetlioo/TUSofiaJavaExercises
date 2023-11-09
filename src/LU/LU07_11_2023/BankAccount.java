@@ -2,6 +2,7 @@ package LU.LU07_11_2023;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Scanner;
 import java.util.UUID;
 
 public class BankAccount {
@@ -36,21 +37,27 @@ public class BankAccount {
     }
 
     public void getTransactions() {
+        Scanner sc = new Scanner(System.in);
         for (Transaction t:
              this.transactions) {
             System.out.println(t.toString());
         }
+
     }
 
     public void withdraw(double amount) throws InsufficientFundsException {
-        if (hasEnoughBalance(amount)) {
-            this.balance -= amount;
-            this.transactions.add(new Transaction(UUID.randomUUID(), new Date(), Type.WITHDRAWAL, amount));
-            System.out.printf("Successfully withdrew %.2f.%n", amount);
-            System.out.printf("Current balance: %.2f.%n", this.balance);
-        } else {
-            System.out.printf("Current balance: %.2f.%n", this.balance);
-            throw new InsufficientFundsException("Not enough money in bank account!");
+        try {
+            if (hasEnoughBalance(amount)) {
+                this.balance -= amount;
+                this.transactions.add(new Transaction(UUID.randomUUID(), new Date(), Type.WITHDRAWAL, amount));
+                System.out.printf("Successfully withdrew %.2f.%n", amount);
+                System.out.printf("Current balance: %.2f.%n", this.balance);
+            } else {
+                System.out.printf("Current balance: %.2f.%n", this.balance);
+                throw new InsufficientFundsException("Not enough money in bank account!");
+            }
+        } catch (InsufficientFundsException e) {
+            System.out.println(e.getMessage());
         }
 
     }

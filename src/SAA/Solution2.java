@@ -1,4 +1,4 @@
-package SAA.LB_27_10_2023;
+package SAA;
 
 public class Solution2 {
     public static void main(String[] args) {
