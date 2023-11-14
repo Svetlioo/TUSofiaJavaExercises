@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Shokolad",
+    "description": "nqkvo opisanie",
+    "ingredients": [
+      {
+        "name": "cacao",
+        "amount": 250.0,
+        "unitOfMeasure": "grama"
+      },
+      {
+        "name": "smetana",
+        "amount": 5.0,
+        "unitOfMeasure": "kg"
+      }
+    ],
+    "instructions": [
+      "slagaite vsichko",
+      "nova instrukciq"
+    ],
+    "rating": 10.0,
+    "reviews": [
+      "dobro e",
+      "dobro e men me kefi"
+    ],
+    "id": 0
+  }
+]
